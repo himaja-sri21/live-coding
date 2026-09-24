@@ -1,0 +1,367 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    gap:20px;
+
+    grid-template-areas:
+    "study hero analytics"
+    "manage goals analytics"
+    "ai stat growth";
+}
+
+.card{
+    border-radius:20px;
+    padding:20px;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* COLORS */
+
+.purple{
+    background:#c884ea;
+    color:white;
+}
+
+.light-purple{
+    background:#edd8ff;
+}
+
+.olive{
+    background:#b6b468;
+}
+
+.cream{
+    background:#f7f4ec;
+}
+
+.white{
+    background:white;
+}
+
+/* GRID AREAS */
+
+.study{
+    grid-area:study;
+}
+
+.hero{
+    grid-area:hero;
+}
+
+.schedule{
+    grid-area:analytics;
+}
+
+.manage{
+    grid-area:manage;
+}
+
+.goals{
+    grid-area:goals;
+}
+
+.ai{
+    grid-area:ai;
+}
+
+.stat{
+    grid-area:stat;
+}
+
+.growth{
+    grid-area:growth;
+}
+
+/* STUDY CARD */
+
+.study{
+    min-height:260px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.study h2{
+    font-size:42px;
+    line-height:1;
+    color:#111;
+}
+
+.study span{
+    color:#b06de2;
+}
+
+.btn{
+    margin-top:25px;
+    border:none;
+    outline:none;
+
+    background:#b6b468;
+    color:white;
+
+    padding:14px 30px;
+    border-radius:40px;
+
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.1;
+    font-weight:700;
+}
+
+.hero span{
+    color:#d8ff4d;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:16px;
+}
+
+/* ANALYTICS */
+
+.schedule{
+    min-height:420px;
+}
+
+.schedule h2{
+    font-size:28px;
+    margin-bottom:30px;
+}
+
+.chart{
+    height:180px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+
+    gap:15px;
+}
+
+.bar{
+    width:30px;
+    background:#c884ea;
+    border-radius:20px;
+}
+
+.bar:nth-child(1){
+    height:40px;
+}
+
+.bar:nth-child(2){
+    height:80px;
+}
+
+.bar:nth-child(3){
+    height:130px;
+}
+
+.bar:nth-child(4){
+    height:100px;
+}
+
+.bar:nth-child(5){
+    height:70px;
+}
+
+.chart-text{
+    margin-top:25px;
+    line-height:1.6;
+}
+
+/* MANAGE */
+
+.manage{
+    min-height:120px;
+
+    display:flex;
+    align-items:center;
+}
+
+.manage h3{
+    font-size:24px;
+    line-height:1.2;
+}
+
+/* GOALS */
+
+.goals{
+    min-height:140px;
+}
+
+.goals h2{
+    margin-bottom:15px;
+}
+
+.goal-box{
+    background:#d7b4f7;
+
+    padding:12px;
+    border-radius:10px;
+
+    margin-bottom:10px;
+}
+
+/* AI CARD */
+
+.ai{
+    min-height:250px;
+}
+
+.ai h2{
+    margin-bottom:15px;
+}
+
+.chat{
+    background:white;
+
+    padding:15px;
+    border-radius:12px;
+
+    margin-top:12px;
+}
+
+/* 85% CARD */
+
+.stat{
+    min-height:250px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.stat h1{
+    font-size:72px;
+    line-height:1;
+}
+
+.stat p{
+    font-size:22px;
+    margin-top:10px;
+}
+
+.avatars{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.avatars img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+/* GROW CARD */
+
+.growth{
+    min-height:250px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.book-box{
+    background:white;
+    color:black;
+
+    padding:15px;
+    border-radius:15px;
+
+    min-width:120px;
+}
+
+.book-box h3{
+    font-size:36px;
+}
+
+.book-box p{
+    font-size:13px;
+}
+
+.growth h2{
+    font-size:28px;
+    line-height:1.3;
+    text-align:right;
+    max-width:220px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+
+        grid-template-columns:1fr;
+
+        grid-template-areas:
+        "hero"
+        "analytics"
+        "manage"
+        "goals"
+        "stat"
+        "growth"
+        "study"
+        "ai";
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .study h2{
+        font-size:34px;
+    }
+
+    .growth{
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+    }
+
+    .growth h2{
+        text-align:center;
+    }
+}
